@@ -1,0 +1,307 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&display=swap");
+:root {
+  --body-background: #1e1e1e;
+  --gray: #262626;
+  --lighter-gray: #313032;
+  --lightest-gray: #a5a5a5;
+  --cyan: #25b8a6;
+  --white: #fff;
+  --table-row: #2f2d2f;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Quicksand", sans-serif;
+  background-color: var(--body-background);
+}
+img {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Quicksand", sans-serif;
+}
+.container {
+  padding: 74px 15px 44px;
+  width: 100%;
+  max-width: 970px;
+  margin: 100px auto;
+  background-color: var(--gray);
+}
+.sectionone {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+}
+.sectionone__left,
+.sectionone__right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.sectionone__left h2,
+.sectionone__right h2 {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 30px;
+  color: var(--white);
+  text-transform: capitalize;
+}
+.sectionone__right h2 {
+  font-weight: 600;
+  font-size: 24px;
+}
+.sectionone__container {
+  background-color: var(--lighter-gray);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sectionone__left .sectionone__container {
+  width: 100%;
+  min-width: 600px;
+}
+.sectionone__right .sectionone__container {
+  width: 100%;
+  min-width: 300px;
+}
+.sectionone__container.sectionone__donuts {
+  height: 245px;
+}
+.sectionone__container.sectionone__court {
+  height: 340px;
+}
+.sectionone__container.sectionone__score {
+  height: 90px;
+}
+.slider__container {
+  background-color: var(--lighter-gray);
+  padding: 30px;
+  height: 100%;
+  width: 100%;
+  border-radius: 15px;
+  padding: 30px 35px 150px;
+}
+.slider__content-helper {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+.slider__arrows {
+  position: absolute;
+  top: 45%;
+  z-index: 20;
+  cursor: pointer;
+  font-size: 25px;
+  color: var(--lightest-gray);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+.slider__arrows-left {
+  left: 0px;
+}
+.slider__arrows-right {
+  right: 0px;
+}
+
+.slider__content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  overflow: hidden;
+  cursor: grab;
+  position: absolute;
+  width: inherit;
+}
+.slider__content p {
+  color: var(--white);
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  margin-bottom: 90px;
+}
+.slider__content h4 {
+  margin-top: 30px;
+  color: var(--white);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 25px;
+  text-transform: capitalize;
+  text-align: center;
+}
+.slider__content span {
+  display: block;
+  font-size: 10px;
+  color: var(--lightest-gray);
+}
+.slider__content img {
+  height: 75px;
+  width: 75px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 0px 5px rgba(49, 48, 50, 1),
+    0px 0px 0px 20px rgba(59, 58, 59, 1);
+}
+.sectiontwo__bars {
+  width: 100%;
+  height: 525px;
+  margin: 20px auto;
+  max-width: 920px;
+}
+.sectiontwo__bars h1 {
+  color: var(--white);
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 30px;
+  text-transform: capitalize;
+}
+.sectiontwo__table {
+  overflow: hidden;
+  max-width: 920px;
+  margin: 0 auto;
+}
+.table__container {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+.table__container .table {
+  border-collapse: collapse;
+}
+.table__container .table .table__header td {
+  padding: 6px 0;
+}
+.table__container .table .table__header td:first-child {
+  width: 300px;
+  border-top-left-radius: 15px;
+}
+.table__container .table .table__header td:last-child {
+  border-top-right-radius: 15px;
+}
+.table__container .table__header {
+  background-color: var(--body-background);
+  color: var(--white);
+  font-size: 12px;
+}
+.table__container .table__team,
+.table__container .table__player {
+  position: relative;
+  background-color: var(--table-row);
+  font-size: 14px;
+  color: var(--white);
+  border-bottom: 1px solid var(--gray);
+  cursor: pointer;
+}
+.table__container .table__team .table__team-name,
+.table__container .table__player .table__player-name {
+  display: flex;
+  gap: 17px;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 8px 0 8px 34px;
+}
+.table__container .table__team img,
+.table__container .table__player img,
+.table__container .table__player .table__player-image {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+}
+.table__container .table__player .table__player-image {
+  background-color: var(--cyan);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.table__container .table__player .table__player-image span {
+  color: var(--white);
+  font-size: 12px;
+}
+.table__container .table__player .table__player-number,
+.table__container .table__team .table__player-number.hidden {
+  width: 18px;
+  height: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--lightest-gray);
+  border-radius: 50%;
+}
+.table__container .table__player .table__player-number.hidden,
+.table__container .table__team .table__player-number.hidden {
+  visibility: hidden;
+}
+.table__container .table__player .table__player-number span {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--body-background);
+}
+
+.highlight {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid var(--body-background);
+}
+.table tr:last-child {
+  border-bottom: none;
+}
+.table__container .table__player .table__player-name {
+  border-bottom-left-radius: 15px;
+}
+
+@media screen and (max-width: 1023px) {
+  .container {
+    margin: 30px auto;
+  }
+  .sectionone {
+    flex-direction: column;
+  }
+  .sectionone__left .sectionone__container {
+    width: 100%;
+    min-width: inherit;
+  }
+  .slider__container {
+    min-height: 370px;
+  }
+  .slider__content-helper {
+    overflow: inherit;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .sectionone__left h2,
+  .sectionone__right h2,
+  .sectiontwo__bars h1 {
+    font-size: 20px;
+  }
+  .table__container {
+    overflow-x: scroll;
+  }
+  .table {
+    min-width: 700px;
+  }
+}
