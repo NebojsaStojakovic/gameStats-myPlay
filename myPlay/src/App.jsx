@@ -3,7 +3,6 @@ import "./App.css";
 import { useQuery } from "react-query";
 import Slider from "./components/Slider";
 import Table from "./components/Table";
-// import { useGetStats } from "./hooks/useGetStats";
 import { getStats } from "./api/getStats";
 
 const App = () => {
@@ -13,11 +12,6 @@ const App = () => {
   const [playersStats, setPlayersStats] = useState();
   const [teamData, setTeamData] = useState();
   const [allTeam, setAllTeam] = useState();
-  // const { data: dataAllStats } = useGetStats("", {
-  //   // onSuccess: (data) => {
-  //   //   setPlayersStats(data?.data);
-  //   // },
-  // });
 
   const { data: dataAllStats, isLoading } = useQuery(
     ["stats"],
